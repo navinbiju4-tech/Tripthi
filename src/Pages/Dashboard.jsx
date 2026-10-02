@@ -100,7 +100,7 @@ function Dashboard({ customer, onAddToCart }) {
           <Link className="section-link" to="/products">All products <FaArrowRight /></Link>
         </div>
         <Row className="g-3 g-xl-4">
-          {products.map((product) => <Col key={product.id} xs={12} sm={6} xl={4}><ProductCard product={product} onAddToCart={onAddToCart} /></Col>)}
+          {products.map((product) => <Col key={product.id} xs={12} sm={6} md={6} xl={3}><ProductCard product={product} onAddToCart={onAddToCart} /></Col>)}
         </Row>
       </section>
 
@@ -115,7 +115,7 @@ function Dashboard({ customer, onAddToCart }) {
           <div><span className="dashboard-eyebrow">LOVED AROUND THE TABLE</span><h2 id="popular-title">Popular products</h2></div>
         </div>
         <Row className="g-3 g-xl-4">
-          {products.slice(0, 2).map((product) => <Col key={`popular-${product.id}`} xs={12} sm={6} xl={4}><ProductCard product={product} onAddToCart={onAddToCart} popular /></Col>)}
+          {products.slice(0, 2).map((product) => <Col key={`popular-${product.id}`} xs={12} sm={6} md={6} xl={3}><ProductCard product={product} onAddToCart={onAddToCart} popular /></Col>)}
         </Row>
       </section>
 

@@ -12,7 +12,7 @@ function Products({ onAddToCart }) {
 		<Container className="customer-products-page">
 			<div className="section-heading"><div><span className="dashboard-eyebrow">ROLLED FRESH, EVERY MORNING</span><h1>Our chapathis</h1><p>Made by hand, ready for your table.</p></div></div>
 			<Row className="g-3 g-xl-4">{products.map((product) => (
-				<Col key={product.id} xs={12} sm={6} xl={4}>
+				<Col key={product.id} xs={12} sm={6} md={6} xl={3}>
 					<Card className="customer-product-card h-100"><div className="customer-product-image-wrap"><Card.Img className="customer-product-image" variant="top" src={product.image} alt={product.name} loading="lazy" /></div><Card.Body className="d-flex flex-column"><div className="d-flex justify-content-between gap-2"><Card.Title>{product.name}</Card.Title><strong className="product-price">${product.price.toFixed(2)}</strong></div><Card.Text>{product.description}</Card.Text><div className="product-card-footer mt-auto"><span>{product.unit}</span><Button className="add-cart-button" onClick={() => onAddToCart(product)}><FaPlus /> Add to cart</Button></div></Card.Body></Card>
 				</Col>
 			))}</Row>

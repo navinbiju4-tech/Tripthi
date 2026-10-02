@@ -72,16 +72,16 @@ function Aboutus() {
         </Container>
       </section>
 
-      <section className="about-reasons-section" data-aos="fade-up">
+      <section className="about-reasons-section" aria-labelledby="about-reasons-title" data-aos="fade-up">
         <Container>
           <div className="about-section-heading">
             <span className="about-kicker about-kicker-dark">THE TRIPTHI DIFFERENCE</span>
-            <h2>Good food starts with good care.</h2>
+            <h2 id="about-reasons-title">Good food starts with good care.</h2>
           </div>
           <Row className="g-3 g-lg-4">
             {reasons.map(({ icon: Icon, title, copy }, index) => (
-              <Col key={title} xs={12} sm={6} lg={index === 4 ? 12 : 3}>
-                <article className={`about-reason${index === 4 ? ' about-reason-wide' : ''}`}>
+              <Col key={title} xs={12} sm={6} lg={4} className={index === 3 ? 'offset-lg-2' : undefined}>
+                <article className="about-reason">
                   <span className="about-reason-icon"><Icon /></span>
                   <div><h3>{title}</h3><p>{copy}</p></div>
                 </article>
